@@ -45,7 +45,6 @@ public class Movie {
     @SerializedName("vote_count")
     private int voteCount;
 
-    // Getters and Setters
 
     public boolean isAdult() {
         return adult;

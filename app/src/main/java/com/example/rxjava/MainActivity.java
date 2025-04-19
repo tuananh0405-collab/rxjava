@@ -17,7 +17,6 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    private static final String TAG = "TAG";
     private MovieViewModel movieViewModel;
     private RecyclerView recyclerView;
     private MovieAdapter movieAdapter;
@@ -58,7 +57,6 @@ public class MainActivity extends AppCompatActivity {
     @SuppressLint("NotifyDataSetChanged")
     private void updateMovieList(List<Movie> movies) {
         if (movieAdapter == null) {
-            Log.d(TAG, "updateMovieList: size in main" + movies.size());
             movieAdapter = new MovieAdapter(this, movies, isGridView);
             recyclerView.setAdapter(movieAdapter);
             recyclerView.setLayoutManager(isGridView ? new GridLayoutManager(this, 2) : new LinearLayoutManager(this));
